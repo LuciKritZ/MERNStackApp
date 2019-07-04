@@ -11,12 +11,11 @@ import {
 } from 'reactstrap';
 import {connect } from 'react-redux';
 import {addItem} from '../components/actions/itemActions';
-import uuid from 'uuid';
 
 class ItemModal extends Component {
     state = {
         modal: false,
-        name: '',
+        name: "",
     }
 
     toggle = () => {
@@ -29,7 +28,6 @@ class ItemModal extends Component {
         e.preventDefault();
 
         const newItem = {
-            id: uuid(),
             name: this.state.name
         }
 
